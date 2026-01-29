@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-  /* 让整个页面内容居中 */
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 水平居中 */
-    justify-content: center; /* 垂直居中 */
-    height: 100vh; /* 使用整个屏幕的高度 */
-    margin: 0;
-    text-align: center;
-    font-family: sans-serif;
-  }
+    <meta charset="UTF-8">
+    <title>我的第一个精装房</title>
+    
+    <style>
+        /* 给整个页面（身体）涂上颜色 */
+        body {
+            background-color: #f0f8ff; /* 这是一个淡蓝色 */
+            font-family: "微软雅黑", sans-serif; /* 换个好看的字体 */
+            text-align: center; /* 让所有东西居中 */
+        }
 
-  /* 第二行字体的特殊效果 */
-  .growing-text span {
-    display: inline-block;
-  }
+        /* 给大标题化妆 */
+        h1 {
+            color: #ff6b6b; /* 标题变成珊瑚红 */
+            margin-top: 100px; /* 离房顶远一点 */
+        }
 
-  /* 逐渐变大的控制 */
-  .size-1 { font-size: 16px; }
-  .size-2 { font-size: 24px; }
-  .size-3 { font-size: 36px; }
-  .size-4 { font-size: 50px; }
-  .big-shot { font-size: 70px; font-weight: bold; color: orange; }
-</style>
+        /* 简单的动画：让文字动起来 */
+        .dong-qi-lai {
+            font-size: 20px;
+            color: #333;
+            animation: move 2s infinite alternate; /* 让它像心跳一样动 */
+        }
+
+        /* 定义动画的规则 */
+        @keyframes move {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>Big Shot</h1>
-  
-  <p class="growing-text">
-    Now you chance be a BIG SHOT
-    <span class="size-1">BIG </span>
-    <span class="size-2">BIG </span>
-    <span class="size-3">BIG </span>
-    <span class="big-shot">SHOT</span>
-  </p>
+    <h1>欢迎来到我的数字领地！</h1>
+
+    <p class="dong-qi-lai">这里正在施工中，敬请期待...</p>
+
+    <button style="padding: 10px 20px; background: white; border: none; cursor: pointer;">
+        点我也没用
+    </button>
 
 </body>
 </html>
